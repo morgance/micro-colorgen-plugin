@@ -14,7 +14,17 @@ colorgen
 Or press `Ctrl-Alt-l` to instantly generate and switch to a new random
 colorscheme.
 
-## Note
+Save the currently generated theme:
 
-Each generated scheme is named `colorgen1`, `colorgen2`, ..., and is not saved
-permanently.
+```
+savecolorgen [colorscheme-name]
+```
+
+If no colorscheme-name is given, the default `colorgen` is used.
+
+## Notes
+
+- The saved theme will be written to `~/.config/micro/colorschemes/colorscheme-name.micro`
+- You can use the saved file permanently by setting it in `settings.json`:
+```json
+"colorscheme": "colorscheme-name"
