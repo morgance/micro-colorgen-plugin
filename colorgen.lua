@@ -1,4 +1,4 @@
-VERSION = "0.0.1"
+VERSION = "0.0.2"
 
 math.randomseed(os.time())
 
@@ -110,7 +110,7 @@ end
 local generated = nil
 local count = 1
 
-function ColorgenCmd(bp)
+function ColorGenCmd(bp)
 	generated = generate_colorscheme()
 	local name = "colorgen" .. count
 	config.AddRuntimeFileFromMemory(config.RTColorscheme, name, generated)
@@ -118,7 +118,7 @@ function ColorgenCmd(bp)
 	count = count + 1
 end
 
-function SavecolorgenCmd(bp, args)
+function SaveColorGenCmd(bp, args)
 	local name
 	if #args >= 1 then
 		name = args[1]
@@ -152,8 +152,8 @@ function SavecolorgenCmd(bp, args)
 end
 
 function init()
-	config.MakeCommand("colorgen", ColorgenCmd, config.NoComplete)
-	config.MakeCommand("savecolorgen", SavecolorgenCmd, config.NoComplete)
-	config.TryBindKey("Ctrl-Alt-l", "lua:colorgen.ColorgenCmd", false)
+	config.MakeCommand("colorgen", ColorGenCmd, config.NoComplete)
+	config.MakeCommand("savecolorgen", SaveColorGenCmd, config.NoComplete)
+	config.TryBindKey("Ctrl-Alt-l", "lua:colorgen.ColorGenCmd", false)
 	config.AddRuntimeFile("colorgen", config.RTHelp, "help/colorgen.md")
 end
