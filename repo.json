@@ -1,0 +1,17 @@
+[{
+	"Name": "colorgen",
+	"Description": "Randomly generates a new 16-color colorscheme each time you run the command.",
+	"Author": "Aki Kareha",
+	"Tags": ["color", "colorscheme", "random", "generate"],
+	"Website": "https://github.com/akikareha/micro-colorgen-plugin",
+	"License": "MIT",
+	"Versions": [
+		{
+			"Version": "0.0.0",
+			"Url": "https://github.com/akikareha/micro-colorgen-plugin/archive/v0.0.0.zip",
+			"Require": {
+				"micro": ">=2.0.0"
+			}
+		}
+	]
+}]
